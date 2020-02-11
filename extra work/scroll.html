@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scroll</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<style type="text/css">
+		html{
+			scroll-behavior: smooth;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		section{
+			width: 100%;
+			height: 300vh;
+			background: url(cd-hero.jpeg) no-repeat;
+			background-size: cover;
+		}
+		.goto{
+			position: fixed;
+			width: 50px;
+			height: 50px;
+			background: #27ae60;
+			bottom: 40px;
+			right: 50px;
+
+			text-decoration: none;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			font-size: 22px;
+
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("a").on('Click', function(event){
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+						window.location.hash = hash;
+					})
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<section>
+		<p>
+			The University of Delhi, informally known as Delhi University (DU), is a collegiate public central university, located in New Delhi, India. It was founded in 1922 by an Act of the Central Legislative Assembly. As a collegiate university, its main functions are divided between the academic departments of the university and affiliated colleges. Consisting of three colleges, two faculties, and 750 students at its founding, the University of Delhi has since become India's largest institution of higher learning and among the largest in the world. The university currently consists of 16 faculties and 86 departments distributed across its North and South campuses. It has 77 affiliated colleges and 5 other institutes with an enrollment of over 132,000 regular students and 261,000 non-formal students. The Vice-President of India serves as the University's chancellor.
+		</p>
+
+		<p>
+			The University of Delhi was established in 1922 as a unitary, teaching and residential university by an Act of the then Central Legislative Assembly of the British India.[3] The University was originally to be named Prince Charles University, but Rai Kedarnath, counselor to the Chief Commissioner of Delhi and founder of Ramjas College, argued that if the university should fail, that would certainly antagonise the Prince. He suggested the name by which it is known today.[4] Hari Singh Gour served as the university's first Vice-Chancellor from 1922 to 1926. Only four colleges existed in Delhi at the time: St. Stephen's College founded in 1881, Hindu College founded in 1899, Zakir Husain Delhi College (then known as The Delhi College), founded in 1692 and Ramjas College founded in 1917, which were subsequently affiliated to the university. The university initially had two faculties (Arts and Science) and approximately 750 students. 
+		</p>
+
+		<p>
+			The seat of power in British India had been transferred from Calcutta to Delhi in 1911. The Viceregal Lodge Estate became the residence of the Viceroy of India until October 1933, when it was given to the University of Delhi. Since then, it has housed the office of the vice-chancellor and other offices.
+		</p>
+
+		<p>
+			When Sir Maurice Gwyer came to India in 1937 to serve as Chief Justice of British India, he became the Vice-Chancellor of the University of Delhi. During his time, postgraduate teaching courses were introduced and laboratories were established at the university.[6] Members of the faculty included Daulat Singh Kothari in Physics and Panchanan Maheshwari in Botany. Gwyer has been called the "maker of university". He served as Vice-Chancellor until 1950
+		</p>
+
+		<p>
+			The silver jubilee year of the university in 1947 coincided with India's independence, and the national flag was hoisted in the main building for the first time by Vijayendra Kasturi Ranga Varadaraja Rao. In that year there was no convocation ceremony due to the partition of India. Instead a special ceremony was held in 1948, attended by then Prime Minister of India Jawaharlal Nehru, as well as by Lord Mountbatten, Lady Mountbatten, Abul Kalam Azad, Zakir Husain and Shanti Swaroop Bhatnagar. Twenty-five years later the golden jubilee celebrations of 1973 were attended by then Prime Minister of India Indira Gandhi, Satyajit Ray, Amrita Pritam and M. S. Subbulakshmi.
+		</p>
+
+		<p>
+			The University has grown into one of the largest universities in India. At present, there are 16 faculties, 86 academic departments, 77 colleges and 5 other recognised institutes spread across city, with 132,435 regular students (114,494 undergraduates and 17,941 postgraduates). There are also 261,169 students in non-formal education programmes (258,831 undergraduates and 2,338 postgraduates). DU's chemistry, geology, zoology, sociology and history departments have been awarded the status of Centres of Advanced Studies. These Centres of Advanced Studies have carved a niche for themselves as centres of excellence in teaching and research in their respective areas. In addition, a number of the university's departments are also receiving grants under the Special Assistance Programme of the University Grants Commission in recognition of their outstanding academic work.DU is one of the most sought after institutions of higher education in India. It also has one of the highest publication counts among Indian universities
+		</p>
+	</section>
+
+	<a href="#" class="goto"><i class="fa fa-arrow-up"></i></a>
+</body>
+</html>
